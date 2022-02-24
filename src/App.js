@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import React,  { useState } from 'react';
+import {Form} from './components/Form/Form';
+import {Pokemon} from './components/Pokemon/Pokemon';
+import axios from 'axios';
 
 function App() {
+  const [pokemon, setPokemon] = useState("");
+    
+  const searchPokemon = async (pokemonSearch) =>{
+    console.log("axios pokemon",pokemonSearch);
+      (pokemonSearch !== "" || pokemonSearch !== undefined) && axios("https://pokeapi.co/api/v2/pokemon/" + pokemonSearch).then(
+        (res) => {
+          setPokemon(res.data);
+          console.log(res.data);
+        }
+      );
+  }
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Pokédex</h1>
+      <Form searchPokemon={searchPokemon}/>
+      <Pokemon pokemon={pokemon}/>
     </div>
   );
 }

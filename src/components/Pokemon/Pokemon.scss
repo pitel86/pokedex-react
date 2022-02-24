@@ -1,0 +1,61 @@
+.pokemon {
+    padding: 0px;
+    background-color: #ffffff;
+    margin: 20px 10px;
+    border: 10px solid #FB1B1B;
+    border-radius: 10px;
+    max-width: 340px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    &__image-container{
+        max-width: 100%;
+        padding: 10px 25px;
+        border-bottom: 5px solid #fb1b1b;
+        background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2fb2821a-1406-4a1d-9b04-6668f278e944/d891h6b-d8407401-2622-4e58-916b-fb8f2aa0b1cb.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJmYjI4MjFhLTE0MDYtNGExZC05YjA0LTY2NjhmMjc4ZTk0NFwvZDg5MWg2Yi1kODQwNzQwMS0yNjIyLTRlNTgtOTE2Yi1mYjhmMmFhMGIxY2IucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Lig7LHkUMLC0UOIoa_SIK85e_eFVpc-dU_lar9U3olM');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &--image{
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+
+    &__info-container{
+        background-color: #000000;
+        color: whitesmoke;
+        padding: 10px;
+
+        &--name{
+            text-transform: capitalize;
+            margin: 5px 0;
+            font-size: 2.2rem;
+        }
+
+        &--type{    
+            text-transform: capitalize;
+            margin: 5px 0;
+            font-size: 1.8rem;
+        }
+
+        &--more{
+            text-transform: capitalize;
+            margin: 5px 0;
+            font-size: 1.3rem
+
+        }
+
+    }
+}
+
+
+h3.pokemon__element2--h3 {
+    text-transform: capitalize;
+    margin: 5px 0;
+}
